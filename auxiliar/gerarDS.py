@@ -13,7 +13,7 @@ def generate_mixed_dataset(n_samples, n_features, n_categorical, n_ordinal, n_in
         X, y = make_classification(n_samples=n_samples, n_features=n_features, 
                                   n_informative=n_features, n_redundant=0, 
                                   n_classes=n_classes, weights=class_balance, 
-                                  flip_y=noise, random_state=random_state)
+                                  flip_y=noise, random_state=random_state, class_sep=2)
     elif dataset_type == 'moons':
         X, y = make_moons(n_samples=n_samples, noise=noise, random_state=random_state)
         if n_features > 2:
